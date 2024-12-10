@@ -15,5 +15,10 @@ int main()
 
     cout << (&a) << endl;
 
+    int c = 6;
+    cout << (c++) << endl;
+    int b = c + 5;
+    cout << (b) << endl;
+
     return 0;
 }
