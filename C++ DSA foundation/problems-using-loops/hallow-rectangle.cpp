@@ -25,8 +25,6 @@ int main()
     return 0;
 }
 
-
-
 // Step 2: Outer loop (go through rows)
 // cpp
 // Copy code
@@ -98,3 +96,43 @@ int main()
 // Outer loop (i) handles the rows.
 // Inner loop (j) handles the columns in each row.
 // Conditions decide whether to print a * (for the boundary) or a space ( ) for the hollow area inside.
+
+// No, you cannot use && (AND operator) instead of || (OR operator) in this condition. Here's why:
+
+// What Does || (OR) Do?
+// The condition:
+
+// cpp
+// Copy code
+// if (i == 1 || j == 1 || i == row || j == col)
+// means any one of these conditions being true is enough to print *. Specifically:
+
+// i == 1 → If the current row is the first row, print *.
+// j == 1 → If the current column is the first column, print *.
+// i == row → If the current row is the last row, print *.
+// j == col → If the current column is the last column, print *.
+// Using || ensures the rectangle's boundary is filled with stars (*), as at least one of these conditions will hold true for boundary positions.
+
+// What Happens If We Use && (AND)?
+// The condition:
+
+// cpp
+// Copy code
+// if (i == 1 && j == 1 && i == row && j == col)
+// means all of these conditions must be true simultaneously for * to be printed.
+
+// This creates a problem:
+
+// For example:
+// i == 1 && j == 1: True only for the top-left corner.
+// i == row && j == col: True only for the bottom-right corner.
+// It is impossible for i to be both 1 and row (the first and last row) or j to be both 1 and col (the first and last column) at the same time.
+// Thus, no cell satisfies all conditions, and the rectangle will not print correctly.
+// Result with &&:
+// If you replace || with &&, you’ll get an empty output because no position meets all the conditions at the same time.
+
+// Correct Use of ||:
+// The || operator ensures that any position on the boundary satisfies at least one of the conditions and gets printed as a *.
+
+// Key Takeaway:
+// Use || (OR) when any one of multiple conditions should be true. Use && (AND) only when all conditions must be true at the same time. In this case, the boundary requires || because different parts of the boundary satisfy different conditions.
