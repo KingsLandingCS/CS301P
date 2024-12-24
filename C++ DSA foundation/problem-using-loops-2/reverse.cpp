@@ -9,9 +9,9 @@ int main()
     int reverse = 0;
     while (n > 0)
     {
-        int lastDigit = n % 10;
-        reverse = reverse * 10 + lastDigit;
-        n /= 10;
+        int lastDigit = n % 10;  // Extract the Last Digit
+        reverse = reverse * 10 + lastDigit; // Update the Reversed Number
+        n /= 10; // Remove the Last Digit from n
     }
 
     cout << reverse << endl;
