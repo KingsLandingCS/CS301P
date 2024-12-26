@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/underwood/Desktop/myWork/BSCS/CS301/CS301P",
-      "program": "/home/underwood/Desktop/myWork/BSCS/CS301/CS301P/build/Debug/outDebug",
+      "cwd": "/home/underwood/Desktop/myWork/BSCS/CS301/CS301P/C++ DSA foundation/problem-using-loops-2",
+      "program": "/home/underwood/Desktop/myWork/BSCS/CS301/CS301P/C++ DSA foundation/problem-using-loops-2/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
