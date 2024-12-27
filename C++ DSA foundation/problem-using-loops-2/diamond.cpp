@@ -25,6 +25,23 @@ int main()
         cout << endl;
     }
 
+    // loop to print lower triangle
+    for (int line = n + 1; line <= 2 * n - 1; line++)
+    {
+        int noOfSpaces = (line - n);
+        for (int i = 0; i < noOfSpaces; i++)
+        {
+            cout << " ";
+        }
+
+        int noOfChars = 2 * (2 * n - line) - 1;
+        for (int j = 0; j < noOfChars; j++)
+        {
+            cout << (char)('A' + j);
+        }
+        cout << endl;
+    }
+
     cout << endl;
 
     return 0;
