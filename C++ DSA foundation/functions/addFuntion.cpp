@@ -1,18 +1,23 @@
 #include <iostream>
 using namespace std;
 
-int add(int num1, int num2)
+int addition(int x, int y)
 {
-    int sum = num1 + num2;
-    return sum;
+    int result = x + y;
+    cout << result << endl;
+    return result;
+}
+
+void func(string name)
+{
+    cout << "Are you having fun " << name << " ?" << endl;
 }
 
 int main()
 {
-    int a = 5;
-    int b = 4;
-
-    cout << add(a, b) << endl;
-
+    func("Zubi");
+    int response = addition(5, 6);
+    cout << response << endl;
+    // addition(12, 13);
     return 0;
 }

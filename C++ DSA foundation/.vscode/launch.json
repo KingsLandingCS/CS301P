@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/underwood/Desktop/myWork/BSCS/CS301/CS301P/C++ DSA foundation",
-      "program": "/home/underwood/Desktop/myWork/BSCS/CS301/CS301P/C++ DSA foundation/build/Debug/outDebug",
+      "cwd": "/home/underwood/Desktop/myWork/BSCS/CS301/CS301P/C++ DSA foundation/functions",
+      "program": "/home/underwood/Desktop/myWork/BSCS/CS301/CS301P/C++ DSA foundation/functions/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
