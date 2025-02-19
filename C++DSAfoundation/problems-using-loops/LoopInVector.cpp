@@ -21,12 +21,20 @@ int main()
     }
     cout << endl;
 
+    v.insert(v.begin() + 2, 6);
     for (int ele : v)
     {
         cout << ele << " ";
     }
-
     cout << endl;
+
+    v.erase(v.begin() - 2);
+
+    int idx = 0;
+    while (idx < v.size())
+    {
+        cout << v[idx++] << " ";
+    }
 
     return 0;
 }
@@ -36,8 +44,6 @@ int main()
 // v is the vector being iterated over.
 // The loop iterates over all elements in v, assigning each element's value to ele in each iteration.
 // It is equivalent to a traditional for loop using an index (i), but more concise.
-
-
 
 // for (int ele : v)
 // {
