@@ -28,7 +28,6 @@ int main()
     return 0;
 }
 
-
 // Step 2: Declare and Initialize a Vector
 // cpp
 // Copy
@@ -147,3 +146,55 @@ int main()
 // ✅ Searches for the last occurrence of x.
 // ✅ If found, prints the last index; otherwise, prints -1.
 // ✅ Time complexity is O(n), where n is the number of elements in v.
+
+// Understanding How the Last Occurrence is Found
+// Let's revisit the loop that searches for x:
+
+// cpp
+// Copy
+// Edit
+// int occurence = -1;
+// for (int i = 0; i < v.size(); i++)  // Loop through the vector
+// {
+//     if (v[i] == x)   // If x is found
+//     {
+//         occurence = i;  // Update occurence to current index
+//     }
+// }
+// Key Observations
+// Loop starts from index 0 and goes up to v.size() - 1.
+// Every time x is found, the occurence variable is updated to the current index.
+// Since the loop keeps running until the end, the last time x is found will overwrite all previous values in occurence.
+// By the end of the loop, occurence will hold the last index where x appeared.
+// Example Walkthrough
+// Input:
+// yaml
+// Copy
+// Edit
+// 3 2 4 2 5 2
+// Enter x:
+// 2
+// How the Loop Works Step-by-Step:
+// Iteration	i	v[i]	x	Condition (v[i] == x)	occurence Value
+// 1st	0	3	2	❌ No	-1
+// 2nd	1	2	2	✅ Yes	1
+// 3rd	2	4	2	❌ No	1
+// 4th	3	2	2	✅ Yes	3
+// 5th	4	5	2	❌ No	3
+// 6th	5	2	2	✅ Yes	5
+// The first time 2 appears is at index 1, so occurence = 1.
+// The second time 2 appears is at index 3, so occurence = 3.
+// The third time 2 appears is at index 5, so occurence = 5.
+// Final Output:
+// Copy
+// Edit
+// 5
+// ✅ Index 5 is the last occurrence of 2.
+
+// What If x Is Not Found?
+// If x is not present in v, the occurence variable remains -1, and the program outputs:
+
+// diff
+// Copy
+// Edit
+// -1
