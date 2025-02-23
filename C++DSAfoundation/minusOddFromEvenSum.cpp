@@ -40,7 +40,7 @@ int main()
         {
             evenIndexSum += arr[i];
         }
-        else if (i % 2 != 0)
+        else
         {
             oddIndexSum += arr[i];
         }
