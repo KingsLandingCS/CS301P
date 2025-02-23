@@ -18,7 +18,7 @@ int main()
         // Handles invalid input
         if (cin.fail())
         {
-            cout << "Invalid input!";
+            cout << "Invalid input!" << endl;
             return 0; // stops execution immediately (anything after it is skipped).
         }
 
