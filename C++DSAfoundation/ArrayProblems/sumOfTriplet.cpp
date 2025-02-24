@@ -1,9 +1,11 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
 int main()
 {
+    //[3,1,2,4,0,6]
+    // targetSum = 6
+
     int arr[] = {3, 1, 2, 4, 0, 6};
     int targetSum = 6;
     int size = 6;
@@ -18,12 +20,13 @@ int main()
                 if (arr[i] + arr[j] + arr[k] == targetSum)
                 {
                     triplet++;
+                    cout << arr[i] << " " << arr[j] << " " << arr[k] << endl;
                 }
             }
         }
     }
 
-    cout << triplet << endl;
+    cout << "Total triplets: " << triplet << endl;
 
     return 0;
 }
