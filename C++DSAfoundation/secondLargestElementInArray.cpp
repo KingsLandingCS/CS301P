@@ -23,11 +23,12 @@ int main()
     int arr[] = {2, 3, 5, 7, 6, 1};
 
     int indexOfLargestElement = largestElementIndex(arr, 6);
+    cout << "Index of Largest Elemenet before mutation: " << arr[indexOfLargestElement] << endl;
     arr[indexOfLargestElement] = -1;
+    cout << "Index of Largest Element after mutation: " << arr[indexOfLargestElement] << endl;
 
-    int indexOfSecondLargestElement = largestElementIndex(arr, 6);
-
-    cout << arr[indexOfSecondLargestElement] << endl;
+    int secondLargestElement = largestElementIndex(arr, 6);
+    cout << "Second Largest Element: " << arr[secondLargestElement] << endl;
 
     return 0;
 }
