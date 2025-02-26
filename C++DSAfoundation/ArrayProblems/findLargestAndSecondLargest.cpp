@@ -3,10 +3,10 @@
 #include <climits>
 using namespace std;
 
-int secondLargestElement(int arr[], int size)
+int findLargestAndSecondLargest(int arr[], int size, int &max, int &secondMax)
 {
-    int max = INT_MIN;
-    int secondMax = INT_MIN;
+    max = INT_MIN;
+    secondMax = INT_MIN;
 
     for (int i = 0; i < size; i++)
     {
@@ -31,7 +31,11 @@ int main()
 {
     int arr[] = {2, 3, 5, 7, 6, 1, 7};
     int n = 7;
+    int max, secondMax;
+    findLargestAndSecondLargest(arr, n, max, secondMax);
 
-    cout << "secondLargestElement: " << secondLargestElement(arr, n) << endl;
+    cout << "Largest Element: " << max << endl;
+    cout << "Second Largest Element: " << secondMax << endl;
+
     return 0;
 }
