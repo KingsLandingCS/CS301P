@@ -9,7 +9,7 @@ int main()
     // k can be greater than n
 
     k = k % n;
-    int ansArr[5];
+    int ansArr[5]; // This declares an array named ansArr of size 5. The number 5 represents the number of elements the array can hold.
     int j = 0;
 
     for (int i = n - k; i < n; i++)
