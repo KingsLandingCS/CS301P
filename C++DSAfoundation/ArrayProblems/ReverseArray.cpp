@@ -35,9 +35,7 @@ int main()
 
 
 
-// cpp
-// Copy
-// Edit
+
 // reverse(arr.begin(), arr.begin() + k);
 // works step by step.
 
