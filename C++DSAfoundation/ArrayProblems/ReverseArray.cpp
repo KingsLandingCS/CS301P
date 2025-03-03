@@ -33,9 +33,6 @@ int main()
     return 0;
 }
 
-
-
-
 // reverse(arr.begin(), arr.begin() + k);
 // works step by step.
 
