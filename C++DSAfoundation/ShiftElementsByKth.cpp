@@ -8,19 +8,20 @@ int main(){
     int k = 2;
 
     k = k%n;
+    int ansArr[n];
     int j = 0;
 
     for(int i = 0; i<n-k; i++){
-        arr[j++] = arr[i];
+        ansArr[j++] = arr[i];
     }
     
     for(int i = 0; i<=k; i++){
-        arr[j++] = arr[i];
+        ansArr[j++] = arr[i];
     }
 
     for(int i = 0; i<n; i++){
 
-        cout<<arr[j]<<" ";
+        cout<<ansArr[i]<<" ";
     }
 
     cout<<endl;
