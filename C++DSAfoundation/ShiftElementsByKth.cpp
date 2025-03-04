@@ -11,7 +11,7 @@ int main(){
     int ansArr[n];
     int j = 0;
 
-    for(int i = 0; i<n-k; i++){
+    for(int i = n-k; i<n; i++){
         ansArr[j++] = arr[i];
     }
     
