@@ -197,3 +197,14 @@ int main()
 // We need freq[100000] to exist.
 // If N = 100000, then freq[100000] does NOT exist (out-of-bounds error) ❌.
 // To prevent errors, we use N = 100010 (a little extra space). ✅
+
+// cout << "Enter queries: ";
+// int q;
+// cin >> q;
+// is used to ask the user how many queries they want to make, and then read the number of queries (q) from the user.
+
+// Here’s a breakdown of the purpose:
+
+// Prompting the user for input: cout << "Enter queries: "; displays the message "Enter queries: " to the user, so they know that the program is asking how many queries they wish to input.
+
+// Reading the number of queries: cin >> q; takes the user's input for the number of queries (q). This value represents how many times the user will input a number, and the program will respond with the frequency of that number from the array arr.
