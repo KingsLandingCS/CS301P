@@ -31,9 +31,9 @@ int main()
     while (q--)
     {
         int l, r;
-        cout << "Please enter the starting point: ";
+        cout << "Please enter the Starting Index for your query: ";
         cin >> l;
-        cout << "Please enter the ending point: ";
+        cout << "Please enter the Ending Index for your query: ";
         cin >> r;
 
         // Calculate the sum between indices l and r
@@ -41,6 +41,9 @@ int main()
 
         // Visualize the left and right index in the terminal
         cout << "Sum from index " << l << " to " << r << " = " << ans << endl;
+
+        // Display the query count after the query result
+        cout << "Query #" << queryCount << " computed." << endl;
 
         queryCount++; // Move to next query
     }
