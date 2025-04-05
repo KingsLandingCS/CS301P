@@ -16,7 +16,8 @@ int main()
     // calculate prefix sum array
     for (int i = 1; i <= n; i++)
     {
-        v[i] += v[i - 1];
+        int prefixSumArray = v[i] += v[i - 1];
+        cout << prefixSumArray << endl;
     }
 
     int q;
@@ -28,7 +29,8 @@ int main()
         cin >> l >> r;
 
         int ans = 0;
-        // ans = prefixsumarray[r] - prefixsumarray[l-1]
+
+        // ans = prefixSumArray[r] - prefixSumArray[l-1]
 
         ans = v[r] - v[l - 1];
         cout << ans << endl;
@@ -127,8 +129,6 @@ int main()
 // Because looping for every query takes O(n) time, but using this formula gives the result in O(1) time.
 
 // So if you have many queries, prefix sum + this formula = super fast 🚀
-
-
 
 // for (int i = 1; i <= n; i++)
 // {
