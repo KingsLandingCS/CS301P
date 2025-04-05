@@ -31,6 +31,7 @@ int main()
         // ans = prefixsumarray[r] - prefixsumarray[l-1]
 
         ans = v[r] - v[l - 1];
+        cout << ans << endl;
     }
 
     return 0;
