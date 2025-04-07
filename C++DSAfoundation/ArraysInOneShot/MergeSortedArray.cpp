@@ -16,7 +16,7 @@ int main()
     int j = 0; // will help us to iterate on arr2
     int k = 0; // will help us to iterate on result
 
-    while (i < m & j < n)
+    while (i < m && j < n)
     {
         // both i and j should be within the limits of arr1 and arr2
         if (arr1[i] < arr2[j])
