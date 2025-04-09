@@ -5,8 +5,8 @@ using namespace std;
 
 int main()
 {
-    int arr[] = {-2, -1, 0, 1, 3, 6, 8, 11, 12};
-    int x = 14;
+    int arr[] = {-2, -1, 0, 3, 6, 8, 11, 12};
+    int x = 16;
     int n = 8;
 
     // code to find if there is a pair with sum x
