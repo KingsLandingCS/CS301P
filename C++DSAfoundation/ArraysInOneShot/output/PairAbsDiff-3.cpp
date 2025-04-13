@@ -51,6 +51,9 @@ int main()
 
     if (!found)
     {
+        // 'found' is still false
+        // 'if (!found)' is just saying "if false is NOT true"
+        // So yes, !found evaluates to true, but found itself is still false.
         cout << "No pair has been found" << endl;
     }
     else
