@@ -18,15 +18,18 @@ int main()
     {
         if (abs(arr[i] - arr[j]) == x)
         {
+            cout << arr[i] - arr[j]  << endl;
             found = true;
             break;
         }
         else if (abs(arr[i] - arr[j]) < x)
         {
+            cout << arr[i] - arr[j]  << endl;
             j++;
         }
         else
         {
+            cout << arr[i] - arr[j]  << endl;
             i++;
         }
     }
