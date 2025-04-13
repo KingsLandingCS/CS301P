@@ -40,12 +40,12 @@ int main()
                 found = true;
                 count++;
             }
-            // else if (arr[j] - arr[i] == x)
-            // {
-            //     cout << "Pair found: (" << arr[j] << ", " << arr[i] << ") → " << x << "\n";
-            //     found = true;
-            //     count++;
-            // }
+            else if (arr[j] - arr[i] == x)
+            {
+                cout << "Pair found: (" << arr[j] << ", " << arr[i] << ") → " << x << "\n";
+                found = true;
+                count++;
+            }
         }
     }
 
