@@ -17,6 +17,7 @@ int main()
 
     int r2, c2;
     cin >> r2 >> c2;
+
     int B[r2][c2];
     for (int i = 0; i < r2; i++)
     {
@@ -26,19 +27,22 @@ int main()
         }
     }
 
+    // Check matrix multiplication validity
     if (c1 != r2)
     {
-        cout << "Matrix multiplication not possible for this input";
+        cout << "Matrix multiplication not possible for this input" << endl;
+        return 0; // Exit the program early
     }
 
     int C[r1][c2];
 
+    // Matrix multiplication
     for (int i = 0; i < r1; i++)
     {
         for (int j = 0; j < c2; j++)
         {
             int value = 0;
-            for (int k = 0; k < r2; k++)
+            for (int k = 0; k < c1; k++) // fixed here: was r2 before, should be c1
             {
                 value += A[i][k] * B[k][j];
             }
@@ -46,6 +50,7 @@ int main()
         }
     }
 
+    // Print result
     for (int i = 0; i < r1; i++)
     {
         for (int j = 0; j < c2; j++)
