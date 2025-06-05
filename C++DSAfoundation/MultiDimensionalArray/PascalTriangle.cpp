@@ -8,10 +8,8 @@ vector<vector<int>> pascalTriangle(int n)
 
     for (int i = 0; i < n; i++)
     {
-        int ith_vector = pascal[i];
-        ith_vector.resize(i + 1);
-
-        for (int j = 0; j < i + 1; j++)
+        pascal[i].resize(i + 1);
+        for (int j = 0; j <= i; j++)
         {
             if (j == 0 || j == i)
             {
@@ -19,11 +17,10 @@ vector<vector<int>> pascalTriangle(int n)
             }
             else
             {
-                pascal[i][j] = pascal[i - 1][j] + pascal[i - 1][j - 1];
+                pascal[i][j] = pascal[i - 1][j - 1] + pascal[i - 1][j];
             }
         }
     }
-
 
     return pascal;
 }
@@ -31,21 +28,19 @@ vector<vector<int>> pascalTriangle(int n)
 int main()
 {
     int n;
+    cout << "Enter number of rows: ";
     cin >> n;
 
-    vector<vector<int>> ans;
-    ans = pascalTriangle(n);
+    vector<vector<int>> ans = pascalTriangle(n);
 
     for (int i = 0; i < ans.size(); i++)
     {
-        for (int j = 0; j < ans[0].size(); j++)
+        for (int j = 0; j < ans[i].size(); j++) // ✅ use ans[i].size()
         {
             cout << ans[i][j] << " ";
         }
         cout << endl;
     }
-
-    pascalTriangle(n);
 
     return 0;
 }
