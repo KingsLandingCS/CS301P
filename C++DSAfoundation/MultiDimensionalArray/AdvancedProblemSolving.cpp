@@ -15,6 +15,11 @@ int maximumOnesRow(vector<vector<int>> &V)
             if (V[i][j] == 1)
             {
                 int numberOfOnes = columns - j;
+                if (numberOfOnes > maxOnes)
+                {
+                    maxOnes = numberOfOnes;
+                    maxOnesRow = i;
+                }
             }
         }
     }
