@@ -2,6 +2,14 @@
 #include <iostream>
 using namespace std;
 
+// 0 1 1 1
+// 0 0 0 1
+// 0 0 1 1
+
+// maxOnes = min_value
+// maxOnesRow = -1
+// columns = 4
+
 int maximumOnesRow(vector<vector<int>> &V)
 {
     int maxOnes = INT_MIN;
@@ -23,6 +31,7 @@ int maximumOnesRow(vector<vector<int>> &V)
             }
         }
     }
+    return maxOnesRow;
 }
 
 int main()
