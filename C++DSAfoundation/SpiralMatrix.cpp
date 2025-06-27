@@ -2,6 +2,54 @@
 #include <vector>
 using namespace std;
 
+void spiralOrder(vector<vector<int>> &matrix)
+{
+    int left = 0;
+    int right = matrix[0].size() - 1;
+    int top = 0;
+    int bottom = matrix.size() - 1;
+    int direction = 0;
+
+    while ()
+    {
+        // left to right
+        if (direction == 0)
+        {
+            for (int col = left; col <= right; col++)
+            {
+                cout << matrix[top][col] << " ";
+            }
+            top++;
+        }
+        else if (direction == 1)
+        {
+            for (int row = top; top <= bottom; row++)
+            {
+                cout << matrix[row][right] << " ";
+            }
+            right--;
+        }
+
+        else if (direction == 2)
+        {
+            for (int col = right; col >= left; col--)
+            {
+                cout << matrix[bottom][col] << " ";
+            }
+            bottom--;
+        }
+
+        else
+        {
+            for (int row = bottom; row >= top; row--)
+            {
+                cout << matrix[row][left] << " ";
+            }
+            left++;
+        }
+    }
+}
+
 int main()
 {
     int n, m;
