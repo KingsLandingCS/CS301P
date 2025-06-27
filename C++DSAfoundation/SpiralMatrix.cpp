@@ -10,7 +10,7 @@ void spiralOrder(vector<vector<int>> &matrix)
     int bottom = matrix.size() - 1;
     int direction = 0;
 
-    while ()
+    while (left <= right && top <= bottom)
     {
         // left to right
         if (direction == 0)
@@ -47,6 +47,8 @@ void spiralOrder(vector<vector<int>> &matrix)
             }
             left++;
         }
+
+        direction = (direction + 1) % 4;
     }
 }
 
