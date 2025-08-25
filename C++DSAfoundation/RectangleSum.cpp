@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
 int rectangleSum(vector<vector<int>> &matrix, int l1, int r1, int l2, int r2)
@@ -47,8 +46,6 @@ int main()
 
     return 0;
 }
-
-
 
 // What this program does
 
