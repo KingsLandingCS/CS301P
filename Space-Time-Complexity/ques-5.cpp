@@ -1,4 +1,5 @@
 #include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main()
@@ -6,12 +7,14 @@ int main()
     int n = 5;
     for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < n; j++)
+        for (int j = 0; j < sqrt(n); j++)
         {
             cout << "*";
-        } // O(n)
+        } // O(sqrt(n))
         cout << endl;
-    } // O(n ^ 2)
+    } // O(nsqrt(n))
 
     return 0;
 }
+
+
