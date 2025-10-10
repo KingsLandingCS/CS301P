@@ -40,7 +40,7 @@ public:
 
         // case 2: list already has elements
         Node *temp = head;         // Both head and temp point to the first node. But we use temp because we don’t want to move head — head should always stay at the beginning of the list.
-        while (temp->next != NULL) // move to last node
+        while (temp->next != NULL) // temp->next means: “Look at the node that comes after the one temp is pointing to.” temp->next != NULL means: “As long as there is a next node, keep going.”
         {
             temp = temp->next;
         }
