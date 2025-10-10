@@ -39,7 +39,7 @@ public:
         } // And then return; ends the function — because we’ve added our first node.
 
         // case 2: list already has elements
-        Node *temp = head;
+        Node *temp = head;         // Both head and temp point to the first node. But we use temp because we don’t want to move head — head should always stay at the beginning of the list.
         while (temp->next != NULL) // move to last node
         {
             temp = temp->next;
