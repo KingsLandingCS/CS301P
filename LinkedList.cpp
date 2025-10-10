@@ -39,12 +39,15 @@ public:
         } // And then return; ends the function — because we’ve added our first node.
 
         // case 2: list already has elements
-        Node *temp = head;         // Both head and temp point to the first node. But we use temp because we don’t want to move head — head should always stay at the beginning of the list.
-        while (temp->next != NULL) // temp->next means: “Look at the node that comes after the one temp is pointing to.” temp->next != NULL means: “As long as there is a next node, keep going.”
+        else
         {
-            temp = temp->next;
+            Node *temp = head;         // Both head and temp point to the first node. But we use temp because we don’t want to move head — head should always stay at the beginning of the list.
+            while (temp->next != NULL) // temp->next means: “Look at the node that comes after the one temp is pointing to.” temp->next != NULL means: “As long as there is a next node, keep going.”
+            {
+                temp = temp->next;
+            }
+            temp->next = newNode; // replace the old NULL (which meant “end of list”) with the address of newNode. Before the line: head → [10 | *-] → [20 | *-] → [30 | next: NULL] newNode → [40 | NULL] After the line: head → [10 | *-] → [20 | *-] → [30 | next: newNode] → [40 | NULL]
         }
-        temp->next = newNode; // replace the old NULL (which meant “end of list”) with the address of newNode. Before the line: head → [10 | *-] → [20 | *-] → [30 | next: NULL] newNode → [40 | NULL] After the line: head → [10 | *-] → [20 | *-] → [30 | next: newNode] → [40 | NULL]
     }
 
     // Display all nodes
