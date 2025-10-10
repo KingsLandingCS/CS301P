@@ -44,7 +44,7 @@ public:
         {
             temp = temp->next;
         }
-        temp->next = newNode;
+        temp->next = newNode; // replace the old NULL (which meant “end of list”) with the address of newNode. Before the line: head → [10 | *-] → [20 | *-] → [30 | next: NULL] newNode → [40 | NULL] After the line: head → [10 | *-] → [20 | *-] → [30 | next: newNode] → [40 | NULL]
     }
 
     // Display all nodes
