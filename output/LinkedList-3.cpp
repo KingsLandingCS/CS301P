@@ -7,7 +7,6 @@ public:
     int data;
     Node *next;
 
-    // constructor
     Node(int val)
     {
         data = val;
@@ -35,24 +34,24 @@ public:
             return;
         }
 
-        else
+        Node *temp = head;
+        while (temp->next != NULL)
         {
-            Node *temp = head;
-            while (temp->next != NULL)
-            {
-                temp = temp->next;
-            }
-            temp->next = newNode;
+            temp = temp->next;
         }
+        temp->next = newNode;
     }
 
     void display()
     {
         Node *temp = head;
-        cout << "Linked List: ";
+        cout << "Linked List Structure:\n";
         while (temp != NULL)
         {
-            cout << temp->data << " ->";
+            cout << "[ Node at: " << temp     // address of the current node
+                 << " | data: " << temp->data // data stored in node
+                 << " | next: " << temp->next // address of next node
+                 << " ]" << endl;
             temp = temp->next;
         }
         cout << "NULL" << endl;
@@ -68,6 +67,5 @@ int main()
     list.append(30);
 
     list.display();
-
     return 0;
 }
