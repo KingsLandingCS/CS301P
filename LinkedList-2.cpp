@@ -57,6 +57,41 @@ public:
         }
         cout << "NULL" << endl;
     }
+
+    void remove()
+    {
+        if (head == NULL)
+        {
+            cout << "Linked List is Empty" << endl;
+        }
+        else
+        {
+            int n;
+
+            cout << "Enter Value for deletion: " << endl;
+            cin >> n;
+
+            if (n == head->data)
+            {
+                Node *ptr = head;
+                head = head->next;
+                delete ptr;
+                cout << "First Node Deleted" << endl;
+            }
+            else
+            {
+                Node *pre = head;
+                Node *ptr = head->next;
+                while (ptr != NULL)
+                {
+                    if (n == ptr->data)
+                    {
+                        pre -> next 
+                    }
+                }
+            }
+        }
+    }
 };
 
 int main()
