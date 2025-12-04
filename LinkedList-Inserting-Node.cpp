@@ -10,12 +10,13 @@ public:
     Node(int value)
     {
         data = value;
-        next = NULL;
+        next = NULL; 
     }
 };
-
++
+ 
 Node *CreateLinkedList(int arr[], int index, int size, Node *prev)
-{
+{jhhjkhjjkhkjhkmhjmhjt
     // Base Case
     if (index == size)
     {

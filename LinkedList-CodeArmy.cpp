@@ -39,7 +39,7 @@ int main()
         {
             Node *temp;
             temp = new Node(arr[i]);
-            temp->next = head;
+            temp->next = head;  
             head = temp;
         }
     }
