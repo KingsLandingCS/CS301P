@@ -28,7 +28,6 @@ int main()
 
     for (int i = 0; i < 5; i++)
     {
-
         if (head == NULL)
         {
             head = new Node(arr[i]);
@@ -39,7 +38,7 @@ int main()
         {
             Node *temp;
             temp = new Node(arr[i]);
-            temp->next = head;  
+            temp->next = head;
             head = temp;
         }
     }

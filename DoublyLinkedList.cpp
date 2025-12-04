@@ -5,41 +5,44 @@ class Node
 {
 public:
     int data;
-    Node *pre;
     Node *next;
+    Node *prev;
 
-    void setData()
+    Node(int value)
     {
-        data = n;
-    }
-    void getData()
-    {
-        return data;
-    }
-
-    void setPrev(Node *p)
-    {
-        pre = p;
-    }
-
-    Node *getPrev()
-    {
-        return pre;
-    }
-
-    void setNext(Node *p)
-    {
-        pre = p;
-    }
-
-    Node *getNext()
-    {
-        return next;
+        data = value;
+        next = prev = NULL;
     }
 };
 
 int main()
 {
+
+    Node *head = NULL;
+
+    // Insert at start
+
+    // LinkedList doesn't exist
+    if (head == NULL)
+    {
+        head = new Node(5);
+    }
+
+    else
+    {
+        Node *temp = new Node(5);
+        temp->next = head;
+        head->prev = temp;
+        head = temp;
+    }
+
+    Node *trav = head;
+
+    while (trav)
+    {
+        cout << trav->data << " ";
+        trav = trav->next;
+    }
 
     return 0;
 }
